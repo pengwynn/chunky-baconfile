@@ -1,0 +1,20 @@
+{
+    "content_type": null, 
+    "description": "", 
+    "file_url": null, 
+    "id": "22ebbfa7e969cd4480bdfed25ec261ed", 
+    "is_folder": true, 
+    "name": "test_folder", 
+    "path": "pengwynn/test_folder", 
+    "permalink": "http://baconfile.com/pengwynn/test_folder/", 
+    "size": null, 
+    "time_modified": 1262753640, 
+    "tiny_url": "http://tinyb.cn/1qk", 
+    "type": "folder", 
+    "url": "/pengwynn/test_folder/", 
+    "user": {
+        "id": 947, 
+        "timezone": "America/Chicago", 
+        "username": "pengwynn"
+    }
+}

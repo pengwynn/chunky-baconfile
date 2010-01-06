@@ -1,0 +1,20 @@
+{
+    "size": 7271,
+    "permalink": "http://baconfile.com/pengwynn/test_folder/wynn-120x120.png/",
+    "name": "wynn-120x120.png",
+    "url": "/pengwynn/test_folder/wynn-120x120.png/",
+    "file_url": "http://s3.amazonaws.com:80/pengwynn.baconfile.com/test_folder%2Fwynn-120x120.png",
+    "time_modified": 1262755171,
+    "tiny_url": "http://tinyb.cn/1qm",
+    "user": {
+        "username": "pengwynn",
+        "timezone": "America/Chicago",
+        "id": 947
+    },
+    "is_folder": false,
+    "path": "pengwynn/test_folder/wynn-120x120.png",
+    "content_type": "image/png",
+    "type": "image",
+    "id": "3c05b1e667fc3cf4fd6219d146324bdd",
+    "description": ""
+}

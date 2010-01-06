@@ -1,0 +1,20 @@
+{
+    "size": 39368,
+    "permalink": "http://baconfile.com/leah/cat.jpg/",
+    "name": "cat.jpg",
+    "url": "/leah/cat.jpg/",
+    "file_url": "http://s3.amazonaws.com:80/leah.baconfile.com/cat.jpg",
+    "time_modified": 1236391578,
+    "tiny_url": "http://tinyb.cn/5s",
+    "user": {
+        "username": "leah",
+        "timezone": "US/Pacific",
+        "id": 2
+    },
+    "is_folder": false,
+    "path": "leah/cat.jpg",
+    "content_type": "image/jpeg",
+    "type": "image",
+    "id": "4456b389edad98575845d466f4ff6f8d",
+    "description": "die in a fire!"
+}
