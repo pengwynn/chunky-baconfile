@@ -7,6 +7,11 @@ require 'hashie'
 gem 'httparty', '~> 0.4.5'
 require 'httparty'
 
+module ChunkyBaconfile
+  def self.public
+    ChunkyBaconfile::Client.new.public
+  end
+end
 
 Hash.send :include, Hashie::HashExtensions
 

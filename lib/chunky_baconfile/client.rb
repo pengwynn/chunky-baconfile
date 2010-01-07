@@ -6,7 +6,7 @@ module ChunkyBaconfile
     base_uri "http://baconfile.com"
 
 
-    def initialize(username, password=nil)
+    def initialize(username=nil, password=nil)
       @username = username
       @auth = {:username => username, :password => password}
     end

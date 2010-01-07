@@ -1,6 +1,20 @@
 require 'helper'
 
 class TestChunkyBaconfile < Test::Unit::TestCase
+  
+  context "when not supplying a username" do
+
+    should "return a list of most recent public files" do
+      stub_get("http://baconfile.com/public.json", "public.json")
+      items = ChunkyBaconfile.public
+      items.size.should == 20
+      items.first.size.should == 54462
+      items.first.description.should == 'GPS on Lake Tahoe'
+      items.first.user.username.should == 'pengwynn'
+    end
+  end
+  
+  
   context "when unauthenticated" do
     
     setup do
@@ -54,7 +68,7 @@ class TestChunkyBaconfile < Test::Unit::TestCase
       folder.size.should be_nil
     end
     
-    should "creata a new file" do
+    should "create a new file" do
       stub_post("http://pengwynn:test@baconfile.com/pengwynn.json", "new_file.json")
       file = @bacon.upload_file(File.new(binary_file_fixture('cat.jpg')))
       file.tiny_url.should == 'http://tinyb.cn/1qm'
