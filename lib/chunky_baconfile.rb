@@ -8,6 +8,10 @@ gem 'httparty', '~> 0.4.5'
 require 'httparty'
 
 module ChunkyBaconfile
+  
+  # Fetch the latest public files
+  #
+  # @return [Array<FileInfo>] returns last 20 most recent public files
   def self.public
     ChunkyBaconfile::Client.new.public
   end

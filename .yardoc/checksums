@@ -1,0 +1,5 @@
+LICENSE 4c641d16b6c1534c7a8e6b29a08a4d46a0b85be9
+README.rdoc d79d1a456cbecd5e5204905d0d6b5fde03dc9c87
+lib/chunky_baconfile/file_info.rb 088daa5b027287b8b2f1f1c417c4493eb651f3b2
+lib/chunky_baconfile/client.rb 054dbf60058272a45a29f4141298549da4aade0c
+lib/chunky_baconfile.rb 258402a8abb2b18dd7649213630c800a92ba50b3
