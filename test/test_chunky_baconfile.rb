@@ -4,14 +4,15 @@ class TestChunkyBaconfile < Test::Unit::TestCase
   context "when unauthenticated" do
     
     setup do
-      @bacon = ChunkyBaconfile.new("leah")
+      @bacon = ChunkyBaconfile::Client.new("leah")
     end
 
     should "return items in a folder" do
       stub_get("http://baconfile.com/leah/bacon.json", "bacon.json")
       items = @bacon.folder("bacon")
-      items.size.should == 11
+      items.size.should == 12
       items.first.size.should == 84295
+      items.first.path.should == 'leah/bacon/bacon-comic.gif'
       items.first.user.username.should == 'leah'
     end
     

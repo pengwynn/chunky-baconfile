@@ -2,6 +2,8 @@ require 'rubygems'
 require 'test/unit'
 require 'shoulda'
 require 'fakeweb'
+gem 'jnunemaker-matchy', '0.4.0'
+require 'matchy'
 
 FakeWeb.allow_net_connect = false
 
