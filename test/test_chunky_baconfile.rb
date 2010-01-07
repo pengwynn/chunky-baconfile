@@ -24,8 +24,13 @@ class TestChunkyBaconfile < Test::Unit::TestCase
       file.description.should == "die in a fire!"
     end
     
-    should_eventually "return a list of most recent public files" do
-      
+    should "return a list of most recent public files" do
+      stub_get("http://baconfile.com/public.json", "public.json")
+      items = @bacon.public
+      items.size.should == 20
+      items.first.size.should == 54462
+      items.first.description.should == 'GPS on Lake Tahoe'
+      items.first.user.username.should == 'pengwynn'
     end
   end
   
