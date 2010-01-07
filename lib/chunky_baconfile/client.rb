@@ -40,6 +40,11 @@ module ChunkyBaconfile
       response = Hashie::Mash.new(self.class.delete("/#{username}/#{name}.json", :basic_auth => @auth))
     end
     
+    def verify
+      response = Hashie::Mash.new(self.class.get("/verify.json", :basic_auth => @auth))
+      response.key?(:user)
+    end
+    
     def self.mime_type(file)
       case 
         when file =~ /\.jpg/ then 'image/jpg'

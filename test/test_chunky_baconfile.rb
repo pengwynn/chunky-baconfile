@@ -41,8 +41,9 @@ class TestChunkyBaconfile < Test::Unit::TestCase
       @bacon = ChunkyBaconfile::Client.new("pengwynn", "test")
     end
 
-    should_eventually "verify credentials" do
-      
+    should "verify credentials" do
+      stub_get("http://pengwynn:test@baconfile.com/verify.json", "verify.json")
+      @bacon.verify.should == true
     end
 
     should "create a new folder" do
