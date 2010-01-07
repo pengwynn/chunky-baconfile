@@ -24,6 +24,10 @@ def fixture_file(filename)
   File.read(file_path)
 end
 
+def binary_file_fixture(filename)
+  File.expand_path(File.dirname(__FILE__) + '/fixtures/' + filename)
+end
+
 def stub_get(url, filename, options={})
   opts = {:body => fixture_file(filename)}.merge(options)
   

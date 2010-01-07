@@ -53,8 +53,12 @@ class TestChunkyBaconfile < Test::Unit::TestCase
       folder.size.should be_nil
     end
     
-    should_eventually "creata a new file" do
-      
+    should "creata a new file" do
+      stub_post("http://pengwynn:test@baconfile.com/pengwynn.json", "new_file.json")
+      file = @bacon.upload_file(File.new(binary_file_fixture('cat.jpg')))
+      file.tiny_url.should == 'http://tinyb.cn/1qm'
+      file.time_modified.should == Time.at(1262755171)
+      file.size.should == 7271
     end
     
     should_eventually "delete a file or a folder" do

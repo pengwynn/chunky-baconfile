@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'cgi'
 
 gem 'hashie', '~> 0.1.3'
 require 'hashie'
