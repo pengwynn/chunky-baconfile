@@ -15,6 +15,9 @@ module ChunkyBaconfile
       response['items'].map {|item| ChunkyBaconfile::FileInfo.new(item)}
     end
 
+    def file(folder_name, file_name)
+      ChunkyBaconfile::FileInfo.new(self.class.get("/#{folder_name}/#{file_name}"))
+    end
 
   end
 end

@@ -16,8 +16,12 @@ class TestChunkyBaconfile < Test::Unit::TestCase
       items.first.user.username.should == 'leah'
     end
     
-    should_eventually "return info about a file" do
-      
+    should "return info about a file" do
+      stub_get("http://baconfile.com/leah/bacon/cat.jpg.json", "cat.jpg.json")
+      file = @bacon.file("bacon", "cat.jpg.json")
+      file.size.should == 39368
+      file.permalink.should == "http://baconfile.com/leah/cat.jpg/"
+      file.description.should == "die in a fire!"
     end
     
     should_eventually "return a list of most recent public files" do
