@@ -29,3 +29,7 @@ def stub_get(url, filename, options={})
   
   FakeWeb.register_uri(:get, baconfile_url(url), opts)
 end
+
+def stub_post(url, filename)
+  FakeWeb.register_uri(:post, baconfile_url(url), :body => fixture_file(filename))
+end

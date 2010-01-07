@@ -22,6 +22,7 @@ class TestChunkyBaconfile < Test::Unit::TestCase
       file.size.should == 39368
       file.permalink.should == "http://baconfile.com/leah/cat.jpg/"
       file.description.should == "die in a fire!"
+      file.time_modified.should == Time.at(1236391578)
     end
     
     should "return a list of most recent public files" do
@@ -35,13 +36,21 @@ class TestChunkyBaconfile < Test::Unit::TestCase
   end
   
   context "when authenticated" do
+    
+    setup do
+      @bacon = ChunkyBaconfile::Client.new("pengwynn", "test")
+    end
 
     should_eventually "verify credentials" do
       
     end
 
-    should_eventually "create a new folder" do
-      
+    should "create a new folder" do
+      stub_post("http://pengwynn:test@baconfile.com/pengwynn.json", "new_folder.json")
+      folder = @bacon.create_folder("test_folder")
+      folder.url.should == '/pengwynn/test_folder/'
+      folder.time_modified.should == Time.at(1262753640)
+      folder.size.should be_nil
     end
     
     should_eventually "creata a new file" do
