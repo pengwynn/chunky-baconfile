@@ -7,5 +7,13 @@ module ChunkyBaconfile
     def time_modified
       Time.at(self[:time_modified])
     end
+    
+    def type
+      self[:type]
+    end
+    
+    def image?
+      self.type == 'image'
+    end
   end
 end
