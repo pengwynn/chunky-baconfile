@@ -30,7 +30,7 @@ module ChunkyBaconfile
     # @param [String] file_name the name of the file
     # @return [FileInfo] the items in the folder
     def file(folder_name, file_name)
-      ChunkyBaconfile::FileInfo.new(self.class.get("/#{@username}/#{folder_name}/#{file_name}"))
+      ChunkyBaconfile::FileInfo.new(self.class.get("/#{@username}/#{folder_name}/#{file_name}.json"))
     end
     
     # Fetch the latest public files
