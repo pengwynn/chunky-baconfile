@@ -61,8 +61,9 @@ class TestChunkyBaconfile < Test::Unit::TestCase
       file.size.should == 7271
     end
     
-    should_eventually "delete a file or a folder" do
-      
+    should "delete a file or a folder" do
+      stub_delete("http://pengwynn:test@baconfile.com/pengwynn/test_folder.json", "delete.json")
+      @bacon.delete("test_folder").key?(:success).should == true
     end
     
   end

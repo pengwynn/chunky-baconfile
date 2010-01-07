@@ -36,6 +36,10 @@ module ChunkyBaconfile
       ChunkyBaconfile::FileInfo.new(self.class.post("/#{@username}.json", opts))
     end
     
+    def delete(name)
+      response = Hashie::Mash.new(self.class.delete("/#{username}/#{name}.json", :basic_auth => @auth))
+    end
+    
     def self.mime_type(file)
       case 
         when file =~ /\.jpg/ then 'image/jpg'
